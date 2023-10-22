@@ -1,6 +1,18 @@
 use csv::Reader;
-use rusqlite::{Connection, Result, MappedRows};
+use rusqlite::{Connection, Result};
 
+#[derive(Debug)]
+pub struct GameSale {
+    pub rank: i32,
+    pub name: String,
+    pub platform: String,
+    pub publisher: String,
+    pub developer: String,
+    pub critic_score: f64,
+    pub user_score: f64,
+    pub total_shipped: f64,
+    pub year: f64,
+}
 
 pub fn create_table(conn: &Connection) -> Result<()> {
     conn.execute(
@@ -28,7 +40,7 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
             return Ok(());
         }
     };
-
+    //let _blank = reader.headers().ok();
     // Prepare an SQL statement outside the loop for better performance
     //let _stmt = conn.prepare("INSERT INTO game_sales (Rank, Name, Platform, Publisher, Developer, Critic_Score, User_Score, Total_Shipped, Year) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)")?;
 
@@ -53,6 +65,14 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
         let total_shipped = String::from_utf8_lossy(&record[7]);
         let year = String::from_utf8_lossy(&record[8]);
 
+        //make rank an integer
+        let rank: i32 = match rank.parse() {
+            Ok(rank) => rank,
+            Err(err) => {
+                println!("Error parsing rank: {:?}", err);
+                continue;
+            }
+        };
         let name_escaped = name.replace('\'', "''");
         let platform_escaped = platform.replace('\'', "''");
         let publisher_escaped = publisher.replace('\'', "''");
@@ -88,13 +108,27 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
 
 // make a function that queries the database and returns the result with a string as the argument
 
-fn query_database<'a>(conn: &'a Connection, query: &str) -> Result<Vec<rusqlite::Row<'a>>> {
+pub fn query_db(conn: &Connection, query: &str) -> Result<Vec<GameSale>> {
     let mut stmt = conn.prepare(query)?;
-    let rows = stmt.query_map([],|row| row)?;
 
-    let result:Result<Vec<rusqlite::Row>> = rows.collect();
+    // Use the struct field names (e.g., "Rank", "Name") to access columns
+    let rows = stmt.query_map([], |row| {
+        Ok(GameSale {
+            rank: row.get("Rank")?,
+            name: row.get("Name")?,
+            platform: row.get("Platform")?,
+            publisher: row.get("Publisher")?,
+            developer: row.get("Developer")?,
+            critic_score: row.get("Critic_Score")?,
+            user_score: row.get("User_Score")?,
+            total_shipped: row.get("Total_Shipped")?,
+            year: row.get("Year")?,
+        })
+    })?;
 
-    Ok(result)
+    // Collect the results into a vector
+    let game_sales: Result<Vec<GameSale>> = rows.collect();
+    game_sales
 }
 pub fn add(a: i32, b: i32) -> i32 {
     a + b

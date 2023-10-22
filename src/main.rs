@@ -36,7 +36,9 @@ fn main() {
     import_csv_to_sqlite(&conn).unwrap();
     profiler.stop("import csv to sqlite");
     profiler.start();
-    let result = query_db(&conn, "SELECT * FROM game_sales LIMIT 5").unwrap();
+    let q_result = query_db(&conn, "SELECT * FROM game_sales LIMIT 5").unwrap();
+    
+    println!("{:?}", q_result);
     profiler.stop("query db");
-    println!("{:?}", result);
+    
 }
