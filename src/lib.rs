@@ -54,7 +54,7 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
                 continue;
             }
         };
-        
+
         let rank = String::from_utf8_lossy(&record[0]);
         let name = String::from_utf8_lossy(&record[1]);
         let platform = String::from_utf8_lossy(&record[2]);
@@ -77,10 +77,10 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
         let platform_escaped = platform.replace('\'', "''");
         let publisher_escaped = publisher.replace('\'', "''");
         let developer_escaped = developer.replace('\'', "''");
-        if user_score == ""{
+        if user_score == "" {
             user_score = std::borrow::Cow::Borrowed("NULL");
         }
-        if critic_score == ""{
+        if critic_score == "" {
             critic_score = std::borrow::Cow::Borrowed("NULL");
         }
 
@@ -100,7 +100,7 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
     }
     log::debug!("reached the end of the loop");
     //if !batch_data.is_empty() {
-        //conn.execute_batch(&batch_data)?;}
+    //conn.execute_batch(&batch_data)?;}
     log::debug!("reached the end of the load csv");
 
     Ok(())
@@ -108,27 +108,15 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
 
 // make a function that queries the database and returns the result with a string as the argument
 
-pub fn query_db(conn: &Connection, query: &str) -> Result<Vec<GameSale>> {
+pub fn query_db(conn: &Connection, query: &str) -> Result<()> {
     let mut stmt = conn.prepare(query)?;
+    let mut rows = stmt.query([]).unwrap();
 
-    // Use the struct field names (e.g., "Rank", "Name") to access columns
-    let rows = stmt.query_map([], |row| {
-        Ok(GameSale {
-            rank: row.get("Rank")?,
-            name: row.get("Name")?,
-            platform: row.get("Platform")?,
-            publisher: row.get("Publisher")?,
-            developer: row.get("Developer")?,
-            critic_score: row.get("Critic_Score")?,
-            user_score: row.get("User_Score")?,
-            total_shipped: row.get("Total_Shipped")?,
-            year: row.get("Year")?,
-        })
-    })?;
+    while let Some(row) = rows.next()? {
+        println!("{:?}", row);
+    }
 
-    // Collect the results into a vector
-    let game_sales: Result<Vec<GameSale>> = rows.collect();
-    game_sales
+    Ok(())
 }
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
