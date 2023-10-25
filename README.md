@@ -3,7 +3,7 @@
 [![Build binary release](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml)
 [![Tests](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml)
 
-Rust_SQLite_CLI.pdf
+![Alt text](Rust_SQLite_CLI.png)
 
 # Rust CLI Binary with SQLite
 
