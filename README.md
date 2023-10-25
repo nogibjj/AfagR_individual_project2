@@ -3,20 +3,11 @@
 [![Build binary release](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml)
 [![Tests](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml)
 
-Dependencies:
-clap = {version = "4.3.4" , features = ["derive"]}
-csv = "1.3.0"
-env_logger = "0.10.0"
-log = "0.4.20"
-rusqlite = "0.29.0"
-
-Dependencies can be installed by running 'cargo add <dependency>' in the command line or by updating the Cargo.toml file in your own project. The project can be run by executing the binary 'steam_cli' located in this repo.
-
 ![Alt text](Rust_SQLite_CLI.png)
 
 # Rust CLI Binary with SQLite
 
-This rust project implements SQLite queries through the rusqlite crate. This implementation is done in parallel with a previous python sqlite project so that the performance increase can be measured. The python project can be referenced at this repository link: https://github.com/johncoogan53/sqlite-lab_John-Coogan and metrics for its ouput will be shown below. This project also implements dynamic local database queries through the command line via the clap crate. The Rust binary for this project called 'steam_cli' can be downloaded from this repository. 
+This rust project implements SQLite queries through the rusqlite crate. This implementation is done in parallel with a previous python sqlite project so that the performance increase can be measured. The python project can be referenced at this repository link: https://github.com/johncoogan53/sqlite-lab_John-Coogan and metrics for its ouput will be shown below. This project also implements dynamic local database queries through the command line via the clap crate. The Rust binary for this project called 'steam_cli' can be downloaded from this repository. Dependencies are located at the bottom of this README.
 
 ## Project description
 This rust project uses video game sales data taken from kaggle in a similar fashion as the python project. It contains a lib.rs file which creates a rusqlite table, imports the csv data to the database, and queries that database. The main.rs file simply calls each of those lib functions while running a profiler for performance metrics. By implementing a query function as a command line tool, this project allows high performance CRUD operations to be dynamically conducted locally through rust and SQLite. 
@@ -50,3 +41,17 @@ Below we look at the python terminal output:
  This performance increase is great, but it does come at a cost. Learning rust. Rust is an interesting language that is very unforgiving. Because it is defensive in nature, allowing for very little implicit coding references, the language can be very difficult to work with. It is also very difficult to read, where python is a human readable language, rust is a language of its own. That said, even after this small project and the use of extensive debug logging, I feel like I have quickly started to catch on to some of rust's nuances. 
 
  A massive frustration with rust so far is how much more needs to be done that python does implicitly. A comparison between these two projects shows this. In python a payload is generated via a csv reader and execute many handles the multiple row insertion into an open connection. In rust, a dedicated struct is created and a batch execute is conducted in a for loop. Mild data cleaning was required in real time as rusqlite panicked from non-standard titles in developer or publisher, highly strict variable assignment was necessary, and the borrowing/ownership/variable lifetime system is highly counterintuitive.
+
+ Dependencies:
+
+clap = {version = "4.3.4" , features = ["derive"]}
+
+csv = "1.3.0"
+
+env_logger = "0.10.0"
+
+log = "0.4.20"
+
+rusqlite = "0.29.0"
+
+Dependencies can be installed by running 'cargo add <dependency>' in the command line or by updating the Cargo.toml file in your own project. The project can be run by executing the binary 'steam_cli' located in this repo.
