@@ -118,6 +118,8 @@ pub fn query_db(conn: &Connection, query: &str) -> Result<()> {
 
     Ok(())
 }
+
+
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }

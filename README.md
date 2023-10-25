@@ -10,7 +10,20 @@
 This rust project implements SQLite queries through the rusqlite crate. This implementation is done in parallel with a previous python sqlite project so that the performance increase can be measured. The python project can be referenced at this repository link: https://github.com/johncoogan53/sqlite-lab_John-Coogan and metrics for its ouput will be shown below. This project also implements dynamic local database queries through the command line via the clap crate. 
 
 ## Project description
-This rust project uses video game sales data taken from kaggle in a similar fashion as the python project. It contains a lib.rs file which creates a rusqlite table, imports the csv data to the database, and queries that database. The main.rs file simply calls each of those lib functions while running a profiler for performance metrics. 
+This rust project uses video game sales data taken from kaggle in a similar fashion as the python project. It contains a lib.rs file which creates a rusqlite table, imports the csv data to the database, and queries that database. The main.rs file simply calls each of those lib functions while running a profiler for performance metrics. By implementing a query function as a command line tool, this project allows high performance CRUD operations to be dynamically conducted locally through rust and SQLite. 
+
+Create:
+![Alt text](RustSQLiteCreate.png)
+![Alt text](RustSQLiteCreate2.png)
+
+Delete:
+![Alt text](RustSQLiteDel.png)
+
+Update:
+![Alt text](RustSQLiteUpdate.png)
+
+Read:
+Can be seen below in performance evaluation
 
 ## Performance Results:
 We see below the rust projects performance with table creation taking 322 microseconds, csv import taking 74ms, and the query taking 298 micro seconds. All together, the project runs in about 74.5 milliseconds or 0.0745 seconds. This is a single run and these times vary moderately but the comparison is quite clear when we look at the python run times.
