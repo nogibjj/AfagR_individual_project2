@@ -3,9 +3,11 @@
 [![Build binary release](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml)
 [![Tests](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml)
 
-# rust-python SQLite comparison
+Rust_SQLite_CLI.pdf
 
-This rust project implements SQLite queries through the rusqlite crate. This implementation is done in parallel with a previous python sqlite project so that the performance increase can be measured. The python project can be referenced at this repository link: https://github.com/johncoogan53/sqlite-lab_John-Coogan and metrics for its ouput will be shown below.
+# Rust CLI Binary with SQLite
+
+This rust project implements SQLite queries through the rusqlite crate. This implementation is done in parallel with a previous python sqlite project so that the performance increase can be measured. The python project can be referenced at this repository link: https://github.com/johncoogan53/sqlite-lab_John-Coogan and metrics for its ouput will be shown below. This project also implements dynamic local database queries through the command line via the clap crate. 
 
 ## Project description
 This rust project uses video game sales data taken from kaggle in a similar fashion as the python project. It contains a lib.rs file which creates a rusqlite table, imports the csv data to the database, and queries that database. The main.rs file simply calls each of those lib functions while running a profiler for performance metrics. 
