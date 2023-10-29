@@ -15,6 +15,10 @@ pub struct GameSale {
 }
 
 pub fn create_table(conn: &Connection) -> Result<()> {
+    //conn.execute(
+        //"DROP TABLE IF EXISTS game_sales",
+        //[],
+    //)?;
     conn.execute(
         "CREATE TABLE IF NOT EXISTS game_sales (
              Rank INTEGER,
@@ -90,7 +94,7 @@ pub fn import_csv_to_sqlite(conn: &Connection) -> Result<()> {
         );
         batch_data.push_str(&curr_query);
         log::debug!("Current Query: {curr_query}");
-        const BATCH_SIZE: usize = 9999999999999999999;
+        const BATCH_SIZE: usize = 99999999999;
         if batch_data.len() >= BATCH_SIZE {
             log::debug!("Batch Data: {batch_data}");
             conn.execute_batch(&batch_data)?;
@@ -114,6 +118,7 @@ pub fn query_db(conn: &Connection, query: &str) -> Result<()> {
 
     while let Some(row) = rows.next()? {
         println!("{:?}", row);
+
     }
 
     Ok(())
