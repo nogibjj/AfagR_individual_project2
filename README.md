@@ -2,7 +2,8 @@
 [![Clippy](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/lint.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/lint.yml)
 [![Build binary release](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/release.yml)
 [![Tests](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml/badge.svg)](https://github.com/johncoogan53/Rust-SQLite-CLI/actions/workflows/tests.yml)
-
+### Video Demo:
+https://www.youtube.com/watch?v=xw97NZKgudw
 ![Alt text](Rust_SQLite_CLI.png)
 
 # Rust CLI Binary with SQLite
