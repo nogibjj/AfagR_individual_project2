@@ -1,0 +1,10 @@
+/Users/ramazanovaaa/Documents/files/Duke/IDS706 Data Engineering Systems/Rust-SQLite-CLI/afag_r_project_2/target/debug/deps/libautocfg-ee1429765a2b8540.rmeta: /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/lib.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/error.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/rustc.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/version.rs
+
+/Users/ramazanovaaa/Documents/files/Duke/IDS706 Data Engineering Systems/Rust-SQLite-CLI/afag_r_project_2/target/debug/deps/libautocfg-ee1429765a2b8540.rlib: /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/lib.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/error.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/rustc.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/version.rs
+
+/Users/ramazanovaaa/Documents/files/Duke/IDS706 Data Engineering Systems/Rust-SQLite-CLI/afag_r_project_2/target/debug/deps/autocfg-ee1429765a2b8540.d: /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/lib.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/error.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/rustc.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/version.rs
+
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/lib.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/error.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/rustc.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.4.0/src/version.rs:
