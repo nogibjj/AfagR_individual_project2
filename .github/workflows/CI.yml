@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      WORKING_DIR: AfagR_Project_2 
+      WORKING_DIR: afag_r_project_2 
 
     steps:
     - name: Checkout code
