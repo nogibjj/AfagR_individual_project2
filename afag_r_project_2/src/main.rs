@@ -3,9 +3,9 @@
 // This will be the CLI portion of the project where we accept
 // user-defined arguments and call lib.rs logic to handle them
 
-use clap::{Parser, Subcommand};
 use afag_r_project_2::{create, delete, extract, load, read, update};
-use rusqlite::{ Result};
+use clap::{Parser, Subcommand};
+use rusqlite::Result;
 
 // Define a struct to hold our CLI arguments
 #[derive(Parser)]

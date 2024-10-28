@@ -45,4 +45,4 @@ jobs:
       uses: actions/upload-artifact@v4 #v3 is scheduled for deprecation Nov 30 2024 check marketplace
       with:
         name: release-binary
-        path: ${{ env.WORKING_DIR }}/target/release/multiplication2
+        path: ${{ env.WORKING_DIR }}/target/release/afag_r_project_2

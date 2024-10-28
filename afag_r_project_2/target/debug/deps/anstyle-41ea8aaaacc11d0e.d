@@ -1,0 +1,10 @@
+/Users/ramazanovaaa/Documents/files/Duke/IDS706 Data Engineering Systems/Rust-SQLite-CLI/afag_r_project_2/target/debug/deps/libanstyle-41ea8aaaacc11d0e.rmeta: /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/lib.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/macros.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/color.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/effect.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/reset.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/style.rs
+
+/Users/ramazanovaaa/Documents/files/Duke/IDS706 Data Engineering Systems/Rust-SQLite-CLI/afag_r_project_2/target/debug/deps/anstyle-41ea8aaaacc11d0e.d: /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/lib.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/macros.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/color.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/effect.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/reset.rs /Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/style.rs
+
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/lib.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/macros.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/color.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/effect.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/reset.rs:
+/Users/ramazanovaaa/.cargo/registry/src/index.crates.io-6f17d22bba15001f/anstyle-1.0.9/src/style.rs:

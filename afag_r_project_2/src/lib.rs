@@ -127,7 +127,6 @@ pub fn create() -> Result<String, String> {
     Ok("Create Success".to_string())
 }
 
-
 pub fn read() -> Result<String, String> {
     // Connect to the SQLite database
     let conn = Connection::open("urbanization.db")
@@ -142,7 +141,7 @@ pub fn read() -> Result<String, String> {
             Ok((
                 row.get::<_, String>(0)?,
                 row.get::<_, String>(1)?,
-                row.get::<_, i64>(2)?,
+                row.get::<_, f64>(2)?,
                 row.get::<_, f64>(3)?,
                 row.get::<_, f64>(4)?,
                 row.get::<_, f64>(5)?,
@@ -154,19 +153,16 @@ pub fn read() -> Result<String, String> {
         })
         .map_err(|e| format!("Failed to query data: {}", e))?;
     // Counter to limit to the first 5 rows
-    let mut count = 0;
-    for row in _data_iter {
+    for (count, row) in _data_iter.enumerate() {
         if count >= 5 {
             break;
         }
         let row_data = row.map_err(|e| format!("Failed to read data: {}", e))?;
         println!("Row {}: {:?}", count + 1, row_data);
-        count += 1;
     }
-   
+
     Ok("Read Success".to_string())
 }
-
 
 pub fn delete() -> Result<String, String> {
     // Connect to the SQLite database
