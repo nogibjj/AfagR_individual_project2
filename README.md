@@ -111,10 +111,9 @@ Delete a specific record from the database.
 ``` bash 
 cargo run -- delete 
 ``` 
-Below you can see the result of the command: 
+Below you can see the result of the command: We deleted the stcd with NY-09, 2nd row in the table. Here we can't see it because we deleted that record. 
 
 ![alt text](delete&read.png)
-
 ## Testing and Linting
 To run tests and check for linting errors, use the following commands:
 
