@@ -1,5 +1,7 @@
 # Rewriting a CRUD Operations Python Script in Rust
 
+[![CI](https://github.com/nogibjj/AfagR_individual_project2/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/AfagR_individual_project2/actions/workflows/CI.yml)
+
 A command-line interface (CLI) tool built with Rust for interacting with an SQLite database. This tool allows users to perform various operations such as data extraction, loading CSV files into SQLite, creating and deleting records, and running queries. It’s designed to work efficiently with large datasets and demonstrates the use of asynchronous requests, error handling, and basic CRUD operations.
 
 ## Table of Contents
