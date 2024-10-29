@@ -15,6 +15,8 @@ A command-line interface (CLI) tool built with Rust for interacting with an SQLi
 - [Testing and Linting](#testing-and-linting)
 - [Project Structure](#project-structure)
 - [Usage of Large Language Models](#usage-of-large-language-models)
+- [Binary Artifact Download Link](#binary-artifact-download-link)
+- [Video explanation]
 
 ---
 
@@ -65,14 +67,14 @@ The following commands are available:
 Download a file from a specified URL.
 
 ``` bash
-cargo run -- extract --url "https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/district-urbanization-index-2022/urbanization-index-2022.csv" --file_path "data/urbanization.csv"
+cargo run -- extract "https://raw.githubusercontent.com/fivethirtyeight/data/refs/heads/master/district-urbanization-index-2022/urbanization-index-2022.csv"  "data/urbanization.csv"
 ```
 
 - load
 
 Load data from a CSV file into the SQLite database.
 ``` bash 
-cargo run -- load --dataset "data/urbanization.csv"
+cargo run -- load "data/urbanization.csv"
 ```
 
 
@@ -147,3 +149,11 @@ The use of LLMs enhanced the development process by:
 - Suggesting code improvements for data extraction, loading, and query handling in SQLite.
 - Generating concise documentation and usage examples to improve user experience.
 - Debugging complex code sections related to async operations, error handling, and database interactions.
+
+## Binary Artifact Download Link
+
+[Binary Artifact Link](https://github.com/nogibjj/AfagR_individual_project2/actions/runs/11566491095/artifacts/2115575219)
+
+#### Video Explanation
+
+[Demo Video](https://youtu.be/EF3zQbRUkVs)
