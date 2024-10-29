@@ -13,7 +13,6 @@ A command-line interface (CLI) tool built with Rust for interacting with an SQLi
 - [Testing and Linting](#testing-and-linting)
 - [Project Structure](#project-structure)
 - [Usage of Large Language Models](#usage-of-large-language-models)
-- [License](#license)
 
 ---
 
@@ -74,18 +73,25 @@ Load data from a CSV file into the SQLite database.
 cargo run -- load --dataset "data/urbanization.csv"
 ```
 
+
 - create
 
 Insert a sample record into the database.
 ``` bash 
 cargo run -- create
 ``` 
+Below you can see the result of the command: 
+
+![alt text](create.png)
 
 - read
 Query the database and display the first 5 rows.
 ``` bash 
 cargo run -- read
 ```
+Below you can see the result of the command: 
+
+![alt text](read.png)
 
 - update
 
@@ -95,12 +101,19 @@ Update a specific record in the database.
 cargo run -- update
 ```
 
+Below you can see the result of the command: 
+
+![alt text](update.png)
+
 - delete
 
 Delete a specific record from the database.
 ``` bash 
 cargo run -- delete 
 ``` 
+Below you can see the result of the command: 
+
+![alt text](delete&read.png)
 
 ## Testing and Linting
 To run tests and check for linting errors, use the following commands:
@@ -119,10 +132,10 @@ make lint
 
 A brief overview of the project’s structure:
 
-	•	src/lib.rs: Contains the core functions for database operations.
-	•	src/main.rs: The CLI entry point that parses commands and calls functions in lib.rs.
-	•	Cargo.toml: The configuration file for managing dependencies and project metadata.
-	•	Makefile: Contains commands for building, testing, and linting the project.
+- src/lib.rs: Contains the core functions for database operations.
+- src/main.rs: The CLI entry point that parses commands and calls functions in lib.rs.
+- Cargo.toml: The configuration file for managing dependencies and project metadata.
+- Makefile: Contains commands for building, testing, and linting the project.
 
 ## Usage of Large Language Models
 
@@ -130,6 +143,6 @@ In the development of this project, Large Language Models (LLMs) such as ChatGPT
 
 The use of LLMs enhanced the development process by:
 
-	•	Suggesting code improvements for data extraction, loading, and query handling in SQLite.
-	•	Generating concise documentation and usage examples to improve user experience.
-	•	Debugging complex code sections related to async operations, error handling, and database interactions.
+- Suggesting code improvements for data extraction, loading, and query handling in SQLite.
+- Generating concise documentation and usage examples to improve user experience.
+- Debugging complex code sections related to async operations, error handling, and database interactions.
