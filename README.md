@@ -16,7 +16,7 @@ A command-line interface (CLI) tool built with Rust for interacting with an SQLi
 - [Project Structure](#project-structure)
 - [Usage of Large Language Models](#usage-of-large-language-models)
 - [Binary Artifact Download Link](#binary-artifact-download-link)
-- [Video explanation]
+- [Video explanation](#video-explanation)
 
 ---
 
